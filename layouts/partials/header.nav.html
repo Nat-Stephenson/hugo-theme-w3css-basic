@@ -37,6 +37,11 @@
   {{- end}}
   {{- template `header-nav-entry` . }}
 
+  <!-- SU Brand Logo -->
+  <a href="{{ .Site.Params.brandHome }}" class="w3-bar-item w3-button">
+    <img src="{{ .Site.Params.logoSmall }}" alt="{{ .Site.Params.brandName }}" style="height:32px;vertical-align:middle;">
+  </a>
+
   {{- if .Site.Menus.topbar }}
     {{- if $.Site.Params.menutopbar.socialEnable }}
       {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}

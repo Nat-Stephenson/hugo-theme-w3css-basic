@@ -15,6 +15,15 @@
     </div> <!-- w3-col -->
     {{- end }} {{/* if aboutUs */}}
 
+    <!-- SU Brand Footer Branding -->
+    <div class="w3-col w3-third">
+      <img src="{{ .Site.Params.logoLargeLight }}" alt="{{ .Site.Params.brandName }}" style="height:48px;vertical-align:middle;">
+      <div>{{ .Site.Params.brandName }}</div>
+      <div><a href="{{ .Site.Params.brandHome }}">{{ .Site.Params.brandHome }}</a></div>
+      <div><a href="{{ .Site.Params.brandGithub }}">GitHub</a></div>
+      <div>{{ .Site.Params.copyright }}</div>
+    </div>
+
     {{- if or $.Site.Params.debug (findRE `\bhtml-comment\b` $.Site.Params.traceFlags) }}
       {{ `<!-- Site.Params.recentPosts  -->` | safeHTML }}
     {{- end}}

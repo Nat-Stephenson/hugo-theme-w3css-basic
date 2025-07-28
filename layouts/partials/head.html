@@ -18,6 +18,23 @@
     {{- end -}}
   </title>
 
+  <!-- SU Brand Colors for CSS variables -->
+  <style>
+    :root {
+      --su-dark-grey: {{ .Site.Params.colorDarkGrey }};
+      --su-charcoal: {{ .Site.Params.colorCharcoal }};
+      --su-yellow: {{ .Site.Params.colorYellow }};
+      --su-white: {{ .Site.Params.colorWhite }};
+      --su-blue: {{ .Site.Params.colorBlue }};
+      --su-foreground: {{ .Site.Params.colorForeground }};
+      --su-background: {{ .Site.Params.colorBackground }};
+      --su-primary: {{ .Site.Params.colorPrimary }};
+      --su-secondary: {{ .Site.Params.colorSecondary }};
+      --su-info: {{ .Site.Params.colorInfo }};
+      --su-link: {{ .Site.Params.linkColor }};
+    }
+  </style>
+
 
   {{ partial `scripts.top.html`           . -}}
   {{ partial "head.cookieconsent.html" . }}
